@@ -1,0 +1,154 @@
+:root {
+    --fuschia: #dc14ad;
+    --lightblue: #14b4dc;
+    --green: #67dc14;
+    --crimson: crimson;
+    --gold: #f3a70e;
+    --black: #000;
+    --white: #fff;
+
+}
+
+* {
+    margin: 0;
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 18px;
+    word-wrap: break-all;
+}
+
+header {
+    background-color: var(--white);
+    padding: 0;
+    height: auto;
+    width: 100%;
+    position: fixed;
+    display: block;
+}
+
+.header {
+    background-color: var(--white);
+    padding: 30px;
+}
+
+h1 {
+    font-size: 24px;
+    word-wrap: break-all;
+    text-align: left;
+}
+
+.box h1 {
+    padding: 10px;
+}
+
+h2 {
+    font-size: 18px;
+    word-wrap: break-all;
+    text-align: center;
+    padding: 10px;
+}
+
+.box h2 {
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid red;
+}
+
+/* orignal
+.box {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 15px;
+    aspect-ratio: 1/1;
+    width: auto
+}
+
+.box {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 15px;
+    aspect-ratio: 1;
+    grid-column: span 1;
+    width: auto;
+}*/
+
+.box {
+    color: white;
+    text-align: center;
+    grid-column: span 1;
+    width: auto;
+    aspect-ratio: 1;
+    border: 0px solid black;
+    padding: 2px;
+}
+
+
+.pink {
+    background-color: var(--fuschia);
+}
+
+.blue {
+    background-color: var(--lightblue);
+}
+
+.green {
+    background-color: var(--green);
+}
+
+.gold {
+    background-color: var(--gold);
+}
+
+.black {
+    background-color: var(--black);
+}
+
+/* original
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+}
+*/
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 0px;
+}
+
+.mmain {
+    padding-top: 200px
+}
+
+
+
+/* Tablet */
+
+@media (max-width: 800px) {
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .box {
+        width: auto;
+        border: 0px solid black;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .box {
+        width: auto;
+        border: 1px solid white;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+}
